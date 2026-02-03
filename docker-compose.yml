@@ -1,0 +1,16 @@
+services:
+  MSpdf:
+    # GitHub Container Registry (Recommended)
+    # simple mode - ghcr.io/alam00000/MSpdf-simple:latest
+    # default mode - ghcr.io/alam00000/MSpdf:latest
+    # Docker Hub (Alternative)
+    # simple mode - MSpdfteam/MSpdf-simple:latest
+    # default mode - MSpdfteam/MSpdf:latest
+    image: ghcr.io/alam00000/MSpdf-simple:latest
+    container_name: MSpdf
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    # For IPv4-only environments
+    #environment:
+    #  - DISABLE_IPV6=true
